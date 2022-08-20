@@ -12,29 +12,40 @@ export type ErrorCodes =
   | 504;
 
 export type ApiError = {
-  message: string
+  message: string;
+};
+
+export type GenericQueryParameters = {
+  [key: string]: string | number;
+};
+
+export type QueryParameters = {
+  page?: number;
+  per_page?: number;
+  direction?: "asc" | "desc";
+  sort?: "created" | "updated";
 };
 
 export type ApiStar = {
-  name: string,
-  full_name: string,
-  disabled: boolean,
-  archived: boolean,
-  topics: Array<string>,
-  stargazers_count: number,
-  forks_count: number,
-  watchers_count: number,
-  open_issues_count: number
-}
+  name: string;
+  full_name: string;
+  disabled: boolean;
+  archived: boolean;
+  topics: Array<string>;
+  stargazers_count: number;
+  forks_count: number;
+  watchers_count: number;
+  open_issues_count: number;
+};
 
 export type Star = {
-  name: string,
-  fullName: string,
-  disabled: boolean,
-  archived: boolean,
-  topics: Array<string>,
-  stargazersCount: number,
-  forksCount: number,
-  watchersCount: number,
-  openIssuesCount: number
-}
+  name: string;
+  fullName: string;
+  disabled: boolean;
+  archived: boolean;
+  topics: Array<string>;
+  stargazersCount: number;
+  forksCount: number;
+  watchersCount: number;
+  openIssuesCount: number;
+};
