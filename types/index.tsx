@@ -12,8 +12,29 @@ export type ErrorCodes =
   | 504;
 
 export type ApiError = {
-  status: {
-    message: string;
-    status_code: ErrorCodes;
-  };
+  message: string
 };
+
+export type ApiStar = {
+  name: string,
+  full_name: string,
+  disabled: boolean,
+  archived: boolean,
+  topics: Array<string>,
+  stargazers_count: number,
+  forks_count: number,
+  watchers_count: number,
+  open_issues_count: number
+}
+
+export type Star = {
+  name: string,
+  fullName: string,
+  disabled: boolean,
+  archived: boolean,
+  topics: Array<string>,
+  stargazersCount: number,
+  forksCount: number,
+  watchersCount: number,
+  openIssuesCount: number
+}
