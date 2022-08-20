@@ -5,13 +5,13 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>EZ GG</title>
-        <meta name="description" content="League of Legends match history" />
+        <title>Git Constellation</title>
+        <meta name="description" content="Github stars" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1>EZ GG</h1>
+        <h1>Git Constellation</h1>
       </main>
 
       <footer></footer>
