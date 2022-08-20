@@ -1,7 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { FormEvent, useState } from "react";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const [username, setUsername] = useState("");
+  const router = useRouter();
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push(`stars/${username}`);
+  };
+
   return (
     <div>
       <Head>
@@ -12,6 +22,18 @@ const Home: NextPage = () => {
 
       <main>
         <h1>Git Constellation</h1>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+          />
+          <button type="submit">Search stars</button>
+        </form>
       </main>
 
       <footer></footer>

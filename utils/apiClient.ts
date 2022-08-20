@@ -25,7 +25,7 @@ const handleError = (error: Error) => {
 
 export const getStarsForUser = async (
   username: string,
-  query: QueryParameters
+  query: QueryParameters | null = null
 ): Promise<ApiStar[]> => {
   try {
     const { data } = await client.get(getUrl(username, query));
