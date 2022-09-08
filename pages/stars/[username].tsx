@@ -39,11 +39,11 @@ const StarsPage = () => {
       <Head>
         <title>{`Stars for ${username}`}</title>
       </Head>
-      <main>
-        <h1>{`${username}'s stars`} </h1>
+      <div>
+        <h2>{`${username}'s stars`} </h2>
         {loading && <p>stars loading...</p>}
         {stars.length && <p>{stars.length}</p>}
-      </main>
+      </div>
     </div>
   );
 };
